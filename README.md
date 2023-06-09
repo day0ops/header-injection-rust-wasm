@@ -1,12 +1,14 @@
 # header-injection Rust based WASM Filter
 
-This filter extracts the body from a subsequent external service call and injects the body content as headers in the original request.
+This filter extracts the body from a subsequent service call and injects the body content as headers to the original request.
 
 Refer to the flow below to get an understanding of this filter.
 
+![Header Injection Flow with WASM](https://github.com/pseudonator/header-injection-rust-wasm/assets/2648624/54692144-3da5-43d3-a5a8-08e7665e24cc)
+
 Built for Rust edition 2021 and Proxy-Wasm ABI v0.2.1.
 
-Note here that the filter does expect an upstream called `postman-echo-service` for it to work. Refer to the flow diagram below.
+Note here that the filter does expect an upstream called `postman-echo-service` for it to work. Refer to the Envoy upstream configuration below.
 
 ## Build Instructions
 
